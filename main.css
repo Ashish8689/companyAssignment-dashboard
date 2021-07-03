@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0
+    ;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+
+
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+
+
+/* ******************  Main left container   ************************ */
+
+.main-container .main-left{
+    flex: 8%;
+    background: #f8f8f8;
+    box-shadow: 0 5px 30px rgba(0,0,0,.4);
+    z-index: 1;
+}
+
+/* ****  Tab Block start  **** */
+
+.tab-block{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.tab-block::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background:#387adf;
+    display: none;
+    transition: .2s ease-in;
+}
+
+.tab-block:nth-child(1){
+    height: 92px;
+     border-bottom: 2px solid #d9dad7;
+}
+
+.tab-block:nth-child(1) img{
+    width: 40px;
+}
+
+.tab-block:hover:nth-child(1){
+    background: transparent;
+}
+
+.tab-block:hover:nth-child(1)::after{
+    display: none;
+}
+
+.tab-block img{
+    width: 23px;
+}
+
+.tab-block i{
+   color: #62929a;
+    opacity: .7;
+}
+
+.tab-block .tab-title{
+    margin: 0;
+    padding-top: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #62929a;
+    opacity: .7;
+}
+
+/* ************  Active tab  ************* */
+.tab-block.active{
+    background: rgba(56, 122, 223,.2);
+}
+
+.tab-block.active::after{
+    display: block;
+}
+
+.tab-block.active .tab-title{
+    font-weight: 700;
+    color: #141414;
+    opacity: 1;
+}
+
+.tab-block.active i{
+   color: #141414;
+    opacity: 1; 
+}
+
+/* *************  Hover tab  ************ */
+.tab-block:hover{
+    background: rgba(56, 122, 223,.2);
+}
+
+.tab-block:hover::after{
+    display: block;
+}
+
+.tab-block:hover .tab-title{
+    font-weight: 700;
+    color: #141414;
+    opacity: 1;
+}
+
+.tab-block:hover i{
+   color: #141414;
+    opacity: 1; 
+}
+
+
+      
+/* **********************   Main right container  **********************  */
+
+.main-container .main-right{
+    flex: 92%;
+}
+
+.empty-container{
+   width: 100%;
+   height: 90px;
+}
+
+.main-inner-container{
+    width: 100%;
+    height: 100%;
+    background: #eeeeee;
+}
+.content-header{
+    padding: 20px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.content-header h2,
+.content-header i{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 5px;
+    color: #62929a;
+    opacity: .8;
+}
+
+  
+.content-container{
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+}
+
+.input-container{
+    margin: 12px auto 0;
+    width: 100%;
+    height:40px;
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.input-container input{
+    width: 100%;
+    height: 100%;
+    border:none;
+    padding: 0 20px;
+}
+
+.input-container input::placeholder{
+    font-size: 14px;
+    font-weight: 700;
+    color: #141414;
+    opacity: .9;
+}
+
+.or{
+    padding: 26px 0 0px;
+    text-align: center;
+    font-weight: 700; 
+    color: #141414;
+}
+
+.content-block{
+    width: 150px;
+    height: 150px;
+    background: rgba(255,255,255,.6);
+    display: grid;
+    place-items: center;
+}
+
+.content-block .content-block-title{
+   font-size: 15px;
+   font-weight: 700;
+}
+
+
+
